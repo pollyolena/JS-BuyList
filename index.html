@@ -1,16 +1,73 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="uk">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик покупок</title>
+    <link rel="stylesheet" type="text/css" href="task2.css">
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+    <div class="container">
+        <div class="shopping-list">
+            <div class="upper_part">
+                <input type="text" id="item-input" placeholder="Назва товару">
+                <button id="bl-button">Додати</button>
+            </div>
+            <table>
+                <tr>
+                    <td><span class="product"><s>Помідори</s></span></td>
+                    <td></td>
+                    <td><span class="button">2</span></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2" align="right"><button class="bought">Не куплено</button></td>
+                </tr>
+                <tr>
+                    <td><span class="product">Печиво</span></td>
+                    <td><button class="circle-button minus-button" data-tooltip="Зменшити кількість">—</button></td>
+                    <td><span class="button">2</span></td>
+                    <td><button class="circle-button plus-button" data-tooltip="Збільшити кількість">+</button></td>
+                    <td></td>
+                    <td><button class="bought">Куплено</button></td>
+                    <td><button class="delete-button" data-tooltip="Видалити">×</button></td>
+                </tr>
+                <tr>
+                    <td><span class="product">Сир</span></td>
+                    <td><button class="circle-button minus-button" data-tooltip="Зменшити кількість">—</button></td>
+                    <td><span class="button">1</span></td>
+                    <td><button class="circle-button plus-button" data-tooltip="Збільшити кількість">+</button></td>
+                    <td></td>
+                    <td><button class="bought">Куплено</button></td>
+                    <td><button class="delete-button" data-tooltip="Видалити">×</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="c_right">
+          <h2>Залишилося</h2>
+          <div class="container-">
+            <div class="item">
+              <span>Печиво</span>
+              <span class="count">2</span>
+            </div>
+            <div class="item">
+              <span>Сир</span>
+              <span class="count">1</span>
+            </div>
+          </div>
+          <h2>Куплено</h2>
+          <div class="container-">
+            <div class="item">
+              <span><s>Помідори</s></span>
+              <span class="count"><s>2</s></span>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="badge">
+  <span><b>Buy List</b></span>
+  <div class="badge-content">
+    Created by: Olena
+  </div>
+</div>
 </body>
 </html>
