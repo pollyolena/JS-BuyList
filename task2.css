@@ -9,7 +9,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  align-items: flex-start;
   padding: 20px;
   border-bottom: none;
 }
@@ -18,11 +17,9 @@ body {
   flex: 1 1 300px;
   padding: 20px;
   border: 1px solid #ccc;
-  margin-top: 20px;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
 }
 
 .upper_part {
@@ -73,7 +70,7 @@ body {
 }
 
 #bl-button:active {
-  transform: translateY(2px);
+  transform: translateY(1px);
 }
 
 #bl-button:active::after {
@@ -203,7 +200,6 @@ td:nth-child(6) {
   white-space: nowrap;
   opacity: 0;
   transition: all 0.4s ease;
-  pointer-events: none;
 }
 
 .minus-button:hover::after {
@@ -378,6 +374,10 @@ h2{
   border: 0;
 }
 
+.badg{
+  border: none;
+}
+
 .badge-content {
   position: absolute;
   top: 100%;
@@ -387,8 +387,9 @@ h2{
   color: white;
   text-align: center;
   padding: 10px 0px;
-  border-radius: 10px;
-  opacity: 0;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: 0;
   transition: all 0.3s ease;
   z-index: -1;
 }
@@ -398,13 +399,19 @@ h2{
 }
 
 @media print {
+  .badg {
+    background-color: white;
+    color: white;
+    display: none;
+  }
   .badge {
     background-color: white;
-    color: #663399;
+    border: #663399;
+    color: white;
   }
-
   .badge-content {
     background-color: white;
     color: #663399;
+    border: #663399;
   }
 }
